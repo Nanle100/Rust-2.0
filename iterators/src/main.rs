@@ -148,3 +148,16 @@ fn main() {
     }
 
 }
+
+// same TODO
+fn main(){
+
+    let v1: Vec<i32> = vec![1, 2, 3, 4, 5];
+
+    // when using collection(), it collects the iteration and puts them in a variable. But while using it we must explicitly state the variable data type which happens to a vector
+    let iter: Vec<i32> = v1.iter().filter(|x| **x % 2 != 0).map(|x| x * 2).collect();
+
+    println!("{:?}", v1); // original vector remains the same
+
+    println!("{:?}", iter);
+}
